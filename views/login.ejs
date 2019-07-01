@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SS-Auth | Login</title>
+    </head>
+    <body>
+        <a href="/" style="text-decoration: none;">Home </a>
+        <a href="/register" style="text-decoration: none;">Register</a>
+
+        <form method="POST" action="/login">
+            <input type="hidden" nane="_csrf" value="{{csrfToken}}">
+            <input type="text" name="email" placeholder="email" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="submit">
+        </form>
+        
+        <% if (locals.error) { %>
+            <h4><%= error %></h4>
+          <% } %>
+    </body>
+</html>
