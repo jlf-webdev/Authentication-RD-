@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 // Database
 ///////////////////////////////////////////
 
-let url = process.env.DB_URL ? process.env.DB_URL : require('./config/creds').url;
+const url = process.env.DB_URL ? process.env.DB_URL : require('./config/creds').url;
 
 mongoose.connect(url, { useNewUrlParser: true });
 
@@ -85,11 +85,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-
 app.use(sessions({
   cookieName : "session",
-  secret : ":lkqshhfl64468jhvqkjs",  // should be stored in an env variable
-  duration : 30 * 60 * 1000,      // 30mins
+  secret : process.env.SECRET ? process.env.SECRET : require('./config/creds').secret,  
+  duration : 30 * 60 * 1000,     
   activeDuration : 5 * 60 * 1000,
   httpOnly: true,
   secure: true,
