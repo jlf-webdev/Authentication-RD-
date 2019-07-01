@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const bcrypt     = require('bcryptjs');
 const sessions   = require('client-sessions');
 const mongoose   = require('mongoose');
-const db         = require('./config/db');
+//const db         = require('./config/db');
 const csurf      = require('csurf');
 const helmet     = require('helmet');
 
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 // Database
 ///////////////////////////////////////////
 
-const url = process.env.DB_URL || db.url;
+const url = process.env.DB_URL;// || db.url;
 mongoose.connect(url, { useNewUrlParser: true });
 
 let User = mongoose.model('User', new mongoose.Schema({
