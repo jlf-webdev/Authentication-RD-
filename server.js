@@ -178,8 +178,8 @@ app.post('/login', verifyInput, (req,res) => {
 // Server
 ////////////////////////////////////////////
 
-
-var server = app.listen(3000, listening);
+var port = process.env.PORT || 3000;
+var server = app.listen(port, listening);
 
 function listening(){
   console.log('listening...');
