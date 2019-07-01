@@ -15,7 +15,8 @@ app.set('view engine', 'ejs');
 // Database
 ///////////////////////////////////////////
 
-mongoose.connect(db.url, { useNewUrlParser: true });
+const url = process.env.DB_URL || db.url;
+mongoose.connect(url, { useNewUrlParser: true });
 
 let User = mongoose.model('User', new mongoose.Schema({
   email:     { type: String, required: true, unique: true},
@@ -178,7 +179,7 @@ app.post('/login', verifyInput, (req,res) => {
 // Server
 ////////////////////////////////////////////
 
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 var server = app.listen(port, listening);
 
 function listening(){
