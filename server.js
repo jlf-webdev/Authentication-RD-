@@ -1,10 +1,11 @@
-const express = require('express');
+const express    = require('express');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcryptjs');
-const sessions = require('client-sessions');
-const mongoose = require('mongoose');
-const csurf = require('csurf');
-const helmet = require('helmet');
+const bcrypt     = require('bcryptjs');
+const sessions   = require('client-sessions');
+const mongoose   = require('mongoose');
+const db         = require('./config/db');
+const csurf      = require('csurf');
+const helmet     = require('helmet');
 
 
 const app = express();
@@ -14,8 +15,7 @@ app.set('view engine', 'ejs');
 // Database
 ///////////////////////////////////////////
 
-
-mongoose.connect('mongodb://localhost/ss-auth', { useNewUrlParser: true });
+mongoose.connect(db.url, { useNewUrlParser: true });
 
 let User = mongoose.model('User', new mongoose.Schema({
   email:     { type: String, required: true, unique: true},
@@ -169,7 +169,7 @@ app.post('/login', verifyInput, (req,res) => {
    
     
     req.session.userId = user._id;
-    console.log(req.session);
+    //console.log(req.session);
     res.redirect("/dashboard");
   });
 });
