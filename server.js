@@ -27,6 +27,7 @@ let User = mongoose.model('User', new mongoose.Schema({
 // Middlewares
 //////////////////////////////////////////////
 
+app.use('/public', express.static('public'));
 
 function verifyInput(req, res, next){
   if ( (req.body.nickname && /[<>'%]/.test(req.body.nickname)) ||
