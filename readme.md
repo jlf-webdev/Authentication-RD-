@@ -8,7 +8,7 @@ This app features :
 	client-sessions session management
 	csrf & headers protection
 
-It is based on Randall Degges talk 'Everything You Ever Wanted to Know About Authentication'. 
+It is based on Randall Degges talks on user authentication. 
 
 	
 
