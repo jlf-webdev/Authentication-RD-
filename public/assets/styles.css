@@ -168,3 +168,44 @@ body {
     opacity: 0.9;
     color: black;
 }
+
+
+/* E404 page
+///////////////*/
+
+.e404-contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*background-color: rgb(0, 0, 0);*/
+}
+
+
+.error-code {
+    font-size: 125%;
+    font-weight: 600;
+    background-color: black;
+    color: rgb(0, 238, 255);   
+    text-align: center;
+    padding: .5rem 2rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.error-msg {
+    background-color: black;
+    color: rgb(0, 238, 255);   
+    text-align: center;
+    padding: .5rem 2rem;
+}
+
+
+/* Bad Origin page
+////////////////////*/
+
+.badOrigin-contents {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.badOrigin-msg {
+    border-radius: 0 0 5px 5px;
+}
