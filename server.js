@@ -116,7 +116,10 @@ app.use(helmet());
 
 
 app.get('/', function(req,res){
-  res.render('index.ejs');
+  if (!req.session) {
+    return res.render('index.ejs');
+  }
+  res.redirect("/dashboard");
 });
 
 app.get('/login', csrfProtection, function(req,res){
