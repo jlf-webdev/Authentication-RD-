@@ -116,7 +116,7 @@ app.use(helmet());
 
 
 app.get('/', function(req,res){
-  if (!req.session) {
+  if (!req.session.userId) {
     return res.render('index.ejs');
   }
   res.redirect("/dashboard");
