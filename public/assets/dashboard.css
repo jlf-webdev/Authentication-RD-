@@ -14,6 +14,11 @@ a {
 
 
 .dash-contents {
+    display: grid;
+    grid-gap: 1px;
+}
+
+.headings {
     background-color: rgba(0,0,0, 0.9);
     padding: 1rem;
 }
@@ -24,23 +29,24 @@ a {
 }
 
 .work {
-    margin-top: 2rem;
     display: grid;
     grid-gap: 1rem;
     text-align: center;
+    background-color: rgba(0,0,0, 0.9);
+    padding-top: 1rem;
 }
 
 
 .item {
     display: grid;
     text-align: center;
-    border: 1px solid rgb(0, 238, 255);
+    /*border: 1px solid rgb(0, 238, 255);*/
     padding: .5rem;
     background-color: rgba(20, 20, 20, 0.1);  
 }
 
 .item img {
-    border: 3px solid black;
+    border: 1px solid rgb(99, 99, 99);
 }
 
 
@@ -53,6 +59,7 @@ a {
 
     .vertical-layout {
         grid-column: 2/3;
+        padding-top: 1rem;
     }
 
     .work {
@@ -64,7 +71,7 @@ a {
 
     .vertical-layout {
         display: grid;
-        grid-template-rows: 1fr 6fr 1fr;
+        grid-template-rows: 2fr 6fr 1fr;
     }
 
     .dash-contents {
@@ -73,6 +80,6 @@ a {
 
     .work {
         grid-template-columns: repeat(3,1fr);
-        grid-gap: 2.5rem;
+        /*grid-gap: 2.5rem;*/
     }
 }

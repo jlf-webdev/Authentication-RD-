@@ -1,7 +1,9 @@
 Authentication & session management
 ===================================
 
-This app features : 
+This website was built to get a better understanding of user authentication, session management and password storage.
+
+It features : 
 	express server
 	mongoDB database
 	bcryptjs password hashing
