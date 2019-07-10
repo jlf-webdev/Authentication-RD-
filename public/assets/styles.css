@@ -108,9 +108,6 @@ body {
     background-color: rgb(228, 228, 228);
     border: none;
     margin:0;
-    -webkit-appearance:none;
-    -webkit-border-radius: 0px;
-    border-radius: 0;
 }
 
 .input-fields input:focus {
@@ -122,6 +119,12 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
+.password {
+    -webkit-appearance:none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
+}
+
 .error {
     background-color: rgb(228, 228, 228);
     text-align: center;
@@ -131,6 +134,9 @@ body {
 .submit-btn {
     /*padding: .2rem 0;*/
     color: rgb(31, 31, 31);
+    -webkit-appearance:none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
 }
 
 .submit-btn:hover {
@@ -171,6 +177,12 @@ body {
     border-radius: 5px;
     opacity : 0.9;
     /*padding: 1rem 1rem;*/
+}
+
+.nickname {
+    -webkit-appearance:none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
 }
 
 .reg-login-lnk {
