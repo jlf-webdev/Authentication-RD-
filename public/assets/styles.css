@@ -108,6 +108,9 @@ body {
     background-color: rgb(228, 228, 228);
     border: none;
     margin:0;
+    -webkit-appearance:none;
+    -webkit-border-radius: 0px;
+    border-radius: 0;
 }
 
 .input-fields input:focus {
@@ -128,9 +131,6 @@ body {
 .submit-btn {
     /*padding: .2rem 0;*/
     color: rgb(31, 31, 31);
-    -webkit-appearance:none;
-    -webkit-border-radius: 0px;
-    border-radius: 0;
 }
 
 .submit-btn:hover {
