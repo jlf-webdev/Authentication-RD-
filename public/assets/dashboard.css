@@ -12,6 +12,9 @@ a {
     color: rgb(0, 238, 255);
 }
 
+input[type=submit] {
+    -webkit-border-radius:0px;
+}
 
 .dash-contents {
     display: grid;
@@ -80,6 +83,5 @@ a {
 
     .work {
         grid-template-columns: repeat(3,1fr);
-        /*grid-gap: 2.5rem;*/
     }
 }
