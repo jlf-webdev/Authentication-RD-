@@ -12,10 +12,6 @@ a {
     color: rgb(0, 238, 255);
 }
 
-input[type=submit] {
-    -webkit-border-radius:0px;
-}
-
 .dash-contents {
     display: grid;
     grid-gap: 1px;
