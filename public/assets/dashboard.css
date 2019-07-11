@@ -14,11 +14,11 @@ a {
 
 .dash-contents {
     display: grid;
-    grid-gap: 1px;
+    grid-gap: 3px;
 }
 
 .headings {
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.7);
     padding: 1rem;
 }
 
@@ -31,7 +31,7 @@ a {
     display: grid;
     grid-gap: 1rem;
     text-align: center;
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.7);
     padding-top: 1rem;
 }
 
@@ -41,7 +41,7 @@ a {
     text-align: center;
     /*border: 1px solid rgb(0, 238, 255);*/
     padding: .5rem;
-    background-color: rgba(20, 20, 20, 0.1);  
+    /*background-color: rgba(20, 20, 20, 0.1);  */
 }
 
 .item img {
@@ -58,7 +58,7 @@ a {
 
     .vertical-layout {
         grid-column: 2/3;
-        padding-top: 1rem;
+        padding-top: 2rem;
     }
 
     .work {
