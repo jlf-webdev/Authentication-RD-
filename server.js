@@ -29,6 +29,14 @@ let User = mongoose.model('User', new mongoose.Schema({
 
 app.use('/public', express.static('public'));
 
+function verifyPassword (req, res, next) {
+  if ( req.body.password && req.body.password.length<8 ) {
+    var error = { error: "Please use a password with 8 characters or more."};
+    return res.render("register", error);
+  }
+  next();
+}
+
 function verifyInput(req, res, next){
   if ( (req.body.nickname && /[<>'%]/.test(req.body.nickname)) ||
        (req.body.email && /[<>'%]/.test(req.body.email))       || 
@@ -143,7 +151,7 @@ app.get('*', function(req,res){
 /////////////////////////////////////////////////////
 
 
-app.post('/register', verifyInput, function(req,res){
+app.post('/register', verifyInput, verifyPassword, function(req,res){
   let hash = bcrypt.hashSync(req.body.password, 14);
   req.body.password = hash;
   let user = new User(req.body);
